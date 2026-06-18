@@ -7,6 +7,16 @@ Augmented-Lagrangian / penalty constraint handling on top of a first-order
 projected solver ([`pga-toolbox`](https://github.com/wadayama/pga-toolbox)), for
 complex-valued (Wirtinger) and real parameters. Built on PyTorch.
 
+![auglag-toolbox visual abstract](docs/figures/visual_abstract.png)
+
+*Both panels are produced from actual runs of the library
+(`examples/visual_abstract.py`): **(A)** on a coupled, covariance-dependent relay
+node-power constraint (no closed-form projection), the augmented Lagrangian drives
+all three KKT residuals to ~1e-7 at a finite penalty ρ=1 — a feasible KKT point;
+**(B)** on a multimodal constrained problem, batched parallel multi-start reaches
+the global optimum (best-of-64) while most single starts settle at worse local
+optima.*
+
 This library owns exactly one thing: the **outer loop that enforces nonlinear,
 coupled, covariance-dependent constraints** which have no closed-form
 projection. The inner maximisation over the easy (projectable) set is delegated

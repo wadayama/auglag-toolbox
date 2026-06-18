@@ -36,3 +36,10 @@ Outputs (written next to the script):
 Expected outcome (the constraint is **active**): feasibility ~3e-7,
 complementarity ~2e-8, stationarity ~1e-7, multiplier `lambda ~ 0.088`, relay
 power equal to the cap, at finite `rho = 1.0`.
+
+## `visual_abstract.py`
+
+Generates the README visual abstract (`docs/figures/visual_abstract.png`) from
+actual runs: panel A is the coupled covariance constraint converging to a KKT
+point; panel B is batched multi-start escaping local optima on a multimodal
+problem. Re-run to regenerate the committed figure.
