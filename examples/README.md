@@ -39,7 +39,8 @@ power equal to the cap, at finite `rho = 1.0`.
 
 ## `visual_abstract.py`
 
-Generates the README visual abstract (`docs/figures/visual_abstract.png`) from
-actual runs: panel A is the coupled covariance constraint converging to a KKT
-point; panel B is batched multi-start escaping local optima on a multimodal
-problem. Re-run to regenerate the committed figure.
+Draws the README visual abstract (`docs/figures/visual_abstract.png`) — a
+conceptual schematic (not a data plot): panel A is the two-layer architecture
+(outer augmented Lagrangian over inner pga-toolbox); panel B is the geometry of
+projection onto `S_easy` plus a multiplier on the projection-free hard
+constraint, converging to a KKT point. Re-run to regenerate the committed figure.

@@ -9,13 +9,14 @@ complex-valued (Wirtinger) and real parameters. Built on PyTorch.
 
 ![auglag-toolbox visual abstract](docs/figures/visual_abstract.png)
 
-*Both panels are produced from actual runs of the library
-(`examples/visual_abstract.py`): **(A)** on a coupled, covariance-dependent relay
-node-power constraint (no closed-form projection), the augmented Lagrangian drives
-all three KKT residuals to ~1e-7 at a finite penalty ρ=1 — a feasible KKT point;
-**(B)** on a multimodal constrained problem, batched parallel multi-start reaches
-the global optimum (best-of-64) while most single starts settle at worse local
-optima.*
+*A conceptual schematic (drawn by `examples/visual_abstract.py`): **(A)** the
+two-layer hybrid — an outer augmented-Lagrangian loop (multipliers for
+projection-free constraints) wrapping the inner `pga-toolbox` projected solver
+(easy, projectable constraints); **(B)** the geometry — the feasible set is the
+projectable easy set $S_{\mathrm{easy}}$ intersected with a projection-free hard
+constraint $g(x)\le 0$. The inner solver projects onto $S_{\mathrm{easy}}$ while
+the multiplier pulls the iterate onto the active constraint, converging to a KKT
+point where $\nabla f = \lambda\,\nabla g$.*
 
 This library owns exactly one thing: the **outer loop that enforces nonlinear,
 coupled, covariance-dependent constraints** which have no closed-form
