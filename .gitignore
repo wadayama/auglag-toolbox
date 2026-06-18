@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg
+*.egg-info/
+build/
+dist/
+.eggs/
+
+# uv / virtual envs
+.venv/
+.python-version
+
+# Test / type-check caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# OS-specific
+Thumbs.db
+
+# Local notes / planning docs that should not be public
+local_notes/
+notes/
+scratch/
+IMPLEMENTATION_PLAN.md
+
+# Generated example outputs (regenerate by running the scripts)
+examples/*.npz
+examples/*.pdf
