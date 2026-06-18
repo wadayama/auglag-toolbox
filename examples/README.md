@@ -37,6 +37,12 @@ Expected outcome (the constraint is **active**): feasibility ~3e-7,
 complementarity ~2e-8, stationarity ~1e-7, multiplier `lambda ~ 0.088`, relay
 power equal to the cap, at finite `rho = 1.0`.
 
+## `check_cuda.py`
+
+Runs the batched solver on CPU and (if available) GPU and checks they agree;
+also serves as a clean-environment install check. Run with
+`uv run python examples/check_cuda.py`.
+
 ## `visual_abstract.py`
 
 Draws the README visual abstract (`docs/figures/visual_abstract.png`) — a

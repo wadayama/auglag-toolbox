@@ -74,6 +74,17 @@ Before `pga-toolbox` is published, inject the sibling checkout for development:
 uv run --with-editable ../pga-toolbox --extra test pytest
 ```
 
+### Verify the install / GPU
+
+[`examples/check_cuda.py`](examples/check_cuda.py) runs the batched solver on
+CPU and, if a CUDA device is present, on GPU, and checks the results agree. It
+also doubles as a clean-environment install check (it only runs if the
+`pga-toolbox` dependency resolved):
+
+```bash
+uv run python examples/check_cuda.py
+```
+
 ## Quick start
 
 Inequality constraint (covariance-weighted power), maximisation:
