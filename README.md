@@ -223,8 +223,6 @@ libraries by the same author.
   information and rate regions for multi-terminal linear Gaussian DAGs.
 - [**fading-dag**](https://github.com/wadayama/fading-dag) — fading-channel MI
   with SGD optimisation (ergodic / outage objectives).
-- [**bussgang-dag**](https://github.com/wadayama/bussgang-dag) — Bussgang
-  surrogate MI for nonlinear linear-Gaussian DAGs.
 
 ## License
 
